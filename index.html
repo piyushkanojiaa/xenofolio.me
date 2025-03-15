@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xeno</title>
+
+    <link rel="icon" type="png|image" href="/IMAGES/sailogo.png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+</head>
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+                                                        <!-- Matrix -->
+    <script src="JAVASCRIPT/matrix.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <header class="header">
+        <a href="#" class="logo">{XENO} </a>
+        
+        <div class="menu-icon" id="menu-btn">☰</div>
+
+ 
+    
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;"  class="page-transition"  class="active">Home</a>
+            <a href="aboutpage/aboutt.html"  class="page-transition"  style="--i:2;">About</a>
+
+            <a href="aboutpage/aboutt.html#skill"  class="page-transition" style="--i:3;">Skills</a>
+            <a href="aboutpage/aboutt.html#project"  class="page-transition"  style="--i:4;">Projects</a>
+            <a href="aboutpage/aboutt.html#contact"  class="page-transition"  style="--i:5;">Contact</a>
+            <a href=""  class="page-transition"  style="--i:5;">Download CV</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+
+        <div class="home-content" data-scroll data-scroll-speed="-5" >
+            <h3 class="mu">Hello, <br> It's me</h3>
+            <h1>PIYUSH KANOJIYA</h1>
+            <h3>And I'm a <span class="pro-text"></span></h3>
+
+            <h3 id="dynamicText">
+                And I'm a <span class="pro-text"></span>
+            </h3>
+            
+            <script>
+                function updateText() {
+                    var typedElement = document.querySelector(".pro-text");
+                    var dynamicText = document.getElementById("dynamicText");
+            
+                    if (window.innerWidth < 393) {
+                        // Stop Typed.js and show a different sentence
+                        dynamicText.innerHTML = "And I'm passionate about cybersecurity & development.";
+                    } else {
+                        // Run Typed.js animation
+                        var typed = new Typed(".pro-text", {
+                            strings: [
+                                "Cybersecurity Enthusiast",
+                                "Frontend Developer",
+                                "Programmer",
+                                "Video Editor"
+                            ],
+                            typeSpeed: 100,
+                            backSpeed: 100,
+                            backDelay: 1000,
+                            loop: true
+                        });
+                    }
+                }
+            
+                // Run on page load
+                updateText();
+            
+                // Listen for screen resize
+                window.addEventListener("resize", updateText);
+            </script>
+            
+            </span></h3>
+            
+            <p>  &emsp; &emsp;This portfolio highlights my passion for cybersecurity, web exploitation, and full-stack web development, showcasing my commitment to ethical practices and secure coding. <br> <br>
+                &emsp; &emsp;I have acquired fundamental knowledge and skills in ethical hacking, web security, and full-stack development, allowing me to build and secure modern web applications. <br> <br>
+                &emsp; &emsp;Explored web exploitation techniques, identified vulnerabilities in web applications, and developed secure, scalable websites using HTML, CSS, JavaScript, React, and backend technologies.
+
+
+            </p>
+
+            <div class="home-sci">
+                <a href="https://github.com/piyushkanojiaa" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/piyush-kanojiya/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://wa.me/7021544991" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.instagram.com/piyushhhkanojia/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            </div>
+           <a href="" class="btn-box" download="Sai CV/Resume">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="IMAGES/saianon.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>  
+    
+</body> 
+</html> 
